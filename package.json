@@ -1,0 +1,33 @@
+{
+  "name": "react-native-crop",
+  "title": "React Native Crop",
+  "version": "1.0.0",
+  "description": "Crops an image in base64 format and returns the result in base64 format.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielpoliciuc/react-native-crop.git",
+    "baseUrl": "https://github.com/gabrielpoliciuc/react-native-crop"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": {
+    "name": "Gabriel Policiuc",
+    "email": "gabriel.policiuc@gmail.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": "^16.8.1",
+    "react-native": ">=0.60.0-rc.0 <1.0.x"
+  },
+  "devDependencies": {
+    "react": "^16.9.0",
+    "react-native": "^0.61.5"
+  }
+}
