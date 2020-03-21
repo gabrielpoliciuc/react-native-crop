@@ -11,7 +11,7 @@ const { Crop } = NativeModules;
  * @returns {Promise<string>} a new base64 image of the cropped area
  * @throws Error if cropping failed due to invalid base64 input img or incorrect cropArea
  */
-export default function CropBase64Img(base64img, cropArea) {
+export default function getCroppedImgBase64(base64img, cropArea) {
   return new Promise((resolve, reject) => {
     Crop.crop(
       base64img,
@@ -21,10 +21,12 @@ export default function CropBase64Img(base64img, cropArea) {
       cropArea.height,
       croppedImage => {
         if (croppedImage !== "") {
-          resolve(`data:image/png;base64,${croppedImage}`);
+          resolve(croppedImage.replace(/(\r\n|\n|\r)/gm, ""));
         }
-        reject(new Error("Provided base64img or crop area is in incorrect format."));
+        reject(
+          new Error("Provided base64img or crop area is in incorrect format.")
+        );
       }
     );
-  })
+  });
 }

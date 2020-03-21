@@ -1,7 +1,7 @@
 {
   "name": "react-native-crop",
   "title": "React Native Crop",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Crops an image in base64 format and returns the result in base64 format.",
   "main": "index.js",
   "scripts": {
